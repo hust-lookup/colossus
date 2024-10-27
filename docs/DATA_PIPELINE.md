@@ -6,7 +6,21 @@
 
 Contribute:
 
-- Draw.io: [Data Pipeline](https://app.diagrams.net/#Hniravjdn%2Fdata-engineering%2Fmain%2Fimages%2Fdata-pipeline.drawio)
+- Draw.io
+
+Reference:
+
+- [Big data pipeline cheatsheet](https://blog.bytebytego.com/p/ep135-big-data-pipeline-cheatsheet)
+- [Serverless](https://aws.amazon.com/serverless/)
+- [Kafka](https://kafka.apache.org/documentation/)
+- [Apache Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
+- [Mlflow](https://mlflow.org/docs/latest/index.html)
+- [Snowflake](https://docs.snowflake.com/en/user-guide/intro.html)
+- [Tableau](https://help.tableau.com/current/pro/desktop/en-us/datasource.htm)
+- [Power BI](https://docs.microsoft.com/en-us/power-bi/fundamentals/desktop-getting-started)
+- [Matplotlib](https://matplotlib.org/stable/contents.html)
+- [Seaborn](https://seaborn.pydata.org/tutorial.html)
+- [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html)
 
 ## Data Source
 
@@ -51,7 +65,6 @@ Contribute:
 
 1. Storage
 
-- Snowflake
 - PostgreSQL
 
 2. Metadata
@@ -61,7 +74,6 @@ Contribute:
 1. BI Tools
 
 - Tableau
-- Power BI
 
 2. Data Visualization
 
@@ -70,13 +82,9 @@ Contribute:
 
 3. Dashboards
 
-- Streamlit
-- Dash
-
 4. Reports
 
 - Jupyter Notebook
-- Google Data Studio
 - Microsoft Excel
 
 ---
