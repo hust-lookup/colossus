@@ -1,5 +1,9 @@
 # Data Pipeline Design
 
+---
+
+![image]('./images/data-pipeline.drawio.svg')
+
 ## Data Source
 
 1. APIs
@@ -66,5 +70,4 @@
 - Google Data Studio
 - Microsoft Excel
 
---- 
-
+---
