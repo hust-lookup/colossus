@@ -4,6 +4,10 @@
 
 ![Data Pipeline](images/data-pipeline.drawio.svg)
 
+Contribute:
+
+- Draw.io: [Data Pipeline](https://app.diagrams.net/#Hniravjdn%2Fdata-engineering%2Fmain%2Fimages%2Fdata-pipeline.drawio)
+
 ## Data Source
 
 1. APIs
@@ -25,6 +29,7 @@
 ## Data Ingestion
 
 1. Batch
+
 2. Streaming
 
 ## Data Lake
@@ -36,7 +41,11 @@
 
 1. ETL
 
-- Apache Flink
+- Apache Airflow
+
+2. ML
+
+- Mlflow
 
 ## Data Warehouse
 
