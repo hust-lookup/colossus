@@ -2,7 +2,7 @@
 
 ---
 
-![image]('./images/data-pipeline.drawio.svg')
+![Data Pipeline](images/data-pipeline.drawio.svg)
 
 ## Data Source
 
