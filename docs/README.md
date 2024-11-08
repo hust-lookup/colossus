@@ -2,7 +2,7 @@
 
 ## Requirements
 
-![Use Cases](./images/use_cases.drawio.svg)
+![Use Cases](./images/usecases.drawio.svg)
 
 [Read More](./REQUIREMENTS.md)
 
