@@ -1,0 +1,27 @@
+name: "hustinsight"
+version: "1"
+services:
+  data_processing_service:
+    build:
+      context: "./services/data_processing_service"
+      dockerfile: "Dockerfile"
+  ingestion_service:
+    build:
+      context: "./services/ingestion_service"
+      dockerfile: "Dockerfile"
+  modeling_service:
+    build:
+      context: "./services/modeling_service"
+      dockerfile: "Dockerfile"
+  web_service:
+    build:
+      context: "./web_service"
+      dockerfile: "Dockerfile"
+  redis:
+    image: "redis:alpine"
+  fluentd:
+    image: "fluent/fluentd"
+  keycloak:
+    build:
+      context: "./services/keycloak"
+      dockerfile: "Dockerfile"
