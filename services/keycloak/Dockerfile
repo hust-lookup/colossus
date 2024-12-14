@@ -1,5 +1,8 @@
 FROM quay.io/keycloak/keycloak:latest as builder
 
+ENV KC_BOOTSTRAP_ADMIN_USERNAME=admin
+ENV KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+
 # Enable health and metrics support
 ENV KC_HEALTH_ENABLED=true
 ENV KC_METRICS_ENABLED=true
@@ -14,6 +17,8 @@ RUN /opt/keycloak/bin/kc.sh build
 
 FROM quay.io/keycloak/keycloak:latest
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
+# modify the standalone.xml to work with kong api gateway
+ADD standalone.xml /opt/keycloak/standalone/configuration/standalone.xml
 
 # change these values to point to a running postgres instance
 ENV KC_DB=postgres
