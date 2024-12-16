@@ -2785,3 +2785,129 @@
 [2024-12-16T17:29:28.385+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:29:28.385+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-12-16T17:29:28.409+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:29:28.409+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
 [2024-12-16T17:29:28.433+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.124 seconds
+[2024-12-16T17:29:58.941+0000] {processor.py:186} INFO - Started process (PID=25191) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:29:58.943+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:29:58.946+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:29:58.945+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:29:58.980+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:29:59.025+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:29:59.025+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:29:59.050+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:29:59.050+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:29:59.081+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.152 seconds
+[2024-12-16T17:30:29.765+0000] {processor.py:186} INFO - Started process (PID=25256) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:30:29.765+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:30:29.767+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:30:29.767+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:30:29.784+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:30:29.809+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:30:29.809+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:30:29.822+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:30:29.822+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:30:29.838+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.080 seconds
+[2024-12-16T17:31:00.118+0000] {processor.py:186} INFO - Started process (PID=25321) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:31:00.119+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:31:00.121+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:31:00.121+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:31:00.137+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:31:00.161+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:31:00.161+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:31:00.175+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:31:00.175+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:31:00.192+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.079 seconds
+[2024-12-16T17:31:30.292+0000] {processor.py:186} INFO - Started process (PID=25386) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:31:30.293+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:31:30.295+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:31:30.294+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:31:30.310+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:31:30.338+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:31:30.337+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:31:30.353+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:31:30.353+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:31:30.370+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.084 seconds
+[2024-12-16T17:32:00.559+0000] {processor.py:186} INFO - Started process (PID=25451) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:32:00.560+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:32:00.562+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:32:00.562+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:32:00.577+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:32:00.601+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:32:00.601+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:32:00.615+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:32:00.614+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:32:00.631+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.077 seconds
+[2024-12-16T17:32:30.780+0000] {processor.py:186} INFO - Started process (PID=25516) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:32:30.781+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:32:30.783+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:32:30.782+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:32:30.798+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:32:30.824+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:32:30.824+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:32:30.837+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:32:30.837+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:32:30.854+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.079 seconds
+[2024-12-16T17:33:00.947+0000] {processor.py:186} INFO - Started process (PID=25581) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:33:00.948+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:33:00.950+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:33:00.949+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:33:00.966+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:33:00.991+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:33:00.990+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:33:01.006+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:33:01.006+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:33:01.023+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.082 seconds
+[2024-12-16T17:33:31.184+0000] {processor.py:186} INFO - Started process (PID=25646) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:33:31.185+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:33:31.187+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:33:31.186+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:33:31.202+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:33:31.226+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:33:31.226+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:33:31.240+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:33:31.239+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:33:31.257+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.078 seconds
+[2024-12-16T17:34:01.434+0000] {processor.py:186} INFO - Started process (PID=25711) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:34:01.435+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:34:01.437+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:34:01.437+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:34:01.453+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:34:01.478+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:34:01.478+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:34:01.494+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:34:01.494+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:34:01.511+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.083 seconds
+[2024-12-16T17:34:31.781+0000] {processor.py:186} INFO - Started process (PID=25776) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:34:31.782+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:34:31.784+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:34:31.783+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:34:31.800+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:34:31.824+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:34:31.824+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:34:31.838+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:34:31.838+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:34:31.854+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.078 seconds
+[2024-12-16T17:35:02.036+0000] {processor.py:186} INFO - Started process (PID=25840) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:35:02.037+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:35:02.039+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:35:02.039+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:35:02.054+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:35:02.079+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:35:02.078+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:35:02.092+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:35:02.091+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:35:02.108+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.077 seconds
+[2024-12-16T17:35:32.671+0000] {processor.py:186} INFO - Started process (PID=25905) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:35:32.672+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:35:32.674+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:35:32.674+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:35:32.689+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:35:32.714+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:35:32.713+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:35:32.727+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:35:32.726+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:35:32.748+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.083 seconds
+[2024-12-16T17:36:03.029+0000] {processor.py:186} INFO - Started process (PID=25970) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:36:03.030+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:36:03.032+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:36:03.032+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:36:03.049+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:36:03.076+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:36:03.076+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:36:03.092+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:36:03.091+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:36:03.108+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.085 seconds
+[2024-12-16T17:36:33.166+0000] {processor.py:186} INFO - Started process (PID=26035) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:36:33.167+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:36:33.169+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:36:33.168+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:36:33.184+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:36:33.208+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:36:33.208+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:36:33.222+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:36:33.221+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:36:33.239+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.079 seconds
+[2024-12-16T17:37:03.449+0000] {processor.py:186} INFO - Started process (PID=26100) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:37:03.450+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:37:03.452+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:37:03.451+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:37:03.467+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:37:03.493+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:37:03.493+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:37:03.508+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:37:03.508+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:37:03.533+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.090 seconds
+[2024-12-16T17:37:34.488+0000] {processor.py:186} INFO - Started process (PID=26165) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:37:34.488+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:37:34.490+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:37:34.490+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:37:34.506+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:37:34.530+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:37:34.530+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:37:34.544+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:37:34.544+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:37:34.559+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.078 seconds
+[2024-12-16T17:38:04.863+0000] {processor.py:186} INFO - Started process (PID=26230) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:38:04.864+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:38:04.866+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:38:04.865+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:38:04.881+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:38:04.905+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:38:04.905+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:38:04.919+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:38:04.919+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:38:04.934+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.077 seconds
+[2024-12-16T17:38:35.173+0000] {processor.py:186} INFO - Started process (PID=26295) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:38:35.173+0000] {processor.py:914} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py for tasks to queue
+[2024-12-16T17:38:35.175+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:38:35.175+0000] {dagbag.py:588} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:38:35.191+0000] {processor.py:925} INFO - DAG(s) 'example_task_group_decorator' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py
+[2024-12-16T17:38:35.216+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:38:35.216+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T17:38:35.230+0000] {logging_mixin.py:190} INFO - [2024-12-16T17:38:35.229+0000] {dag.py:4180} INFO - Setting next_dagrun for example_task_group_decorator to None, run_after=None
+[2024-12-16T17:38:35.246+0000] {processor.py:208} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_task_group_decorator.py took 0.081 seconds
