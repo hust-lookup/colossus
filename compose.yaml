@@ -1,27 +1,61 @@
 name: "hustinsight"
-version: "1"
 services:
   data_processing_service:
     build:
       context: "./services/data_processing_service"
       dockerfile: "Dockerfile"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
+        tag: "data_processing_service"
   ingestion_service:
     build:
       context: "./services/ingestion_service"
       dockerfile: "Dockerfile"
-  modeling_service:
-    build:
-      context: "./services/modeling_service"
-      dockerfile: "Dockerfile"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
+        tag: "ingestion_service"
   web_service:
     build:
       context: "./web_service"
       dockerfile: "Dockerfile"
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: "localhost:24224"
+        tag: "web_service"
   redis:
     image: "redis:alpine"
+    container_name: redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+  postgres:
+    image: "postgres:alpine"
+    container_name: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
   fluentd:
-    image: "fluent/fluentd"
-  keycloak:
+    user: root
     build:
-      context: "./services/keycloak"
+      context: "./services/fluentd"
       dockerfile: "Dockerfile"
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+      - "5140:5140"
+volumes:
+  redis_data:
+  postgres_data:
