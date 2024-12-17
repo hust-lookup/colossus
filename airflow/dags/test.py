@@ -1,16 +1,6 @@
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonVirtualenvOperator
 from datetime import datetime, timedelta
-import dvc.api
-import pandas as pd
-import dask.dataframe as dd
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
-from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import train_test_split
-from surprise import Dataset as SurpriseDataset, Reader, SVD
-from surprise.model_selection import train_test_split as surprise_train_test_split
-from surprise import accuracy
-import numpy as np
 
 default_args = {
     'owner': 'airflow',
@@ -28,7 +18,7 @@ data_processed = "processed_data/output.csv"
 with DAG(
     dag_id="data_processing_pipeline",
     default_args=default_args,
-    description="DAG for processing large datasets and recommendation models with DVC and S3",
+    description="DAG for processing large datasets and recommendation models with virtualenv",
     schedule_interval=timedelta(days=1),
     start_date=datetime(2023, 1, 1),
     catchup=False,
@@ -36,9 +26,14 @@ with DAG(
 ) as dag:
 
     def process_raw_data():
+        import pandas as pd
+        import dask.dataframe as dd
+        from sklearn.preprocessing import StandardScaler, OneHotEncoder
+        import numpy as np
+
         try:
             # Load and process raw data
-            ddf = dd.read_csv(data_raw, blocksize=100000)
+            ddf = dd.read_csv("data/2019-Nov.csv", blocksize=100000)
 
             # Clean missing data
             ddf = ddf.fillna({'category_code': 'Unknown', 'brand': 'Unknown', 'event_type': 'Unknown'})
@@ -61,16 +56,23 @@ with DAG(
             ddf['price'] = dd.from_array(scaler.fit_transform(ddf['price'].compute().values.reshape(-1, 1)))
 
             # Save processed data
-            ddf.compute().to_csv(data_processed, index=False)
+            ddf.compute().to_csv("processed_data/output.csv", index=False)
             print("Data processing completed and saved.")
-
         except Exception as e:
             print(f"Error in process_raw_data: {e}")
 
     def train_models():
+        import pandas as pd
+        from sklearn.metrics import mean_squared_error
+        from sklearn.model_selection import train_test_split
+        import numpy as np
+        from surprise import Dataset as SurpriseDataset, Reader, SVD
+        from surprise.model_selection import train_test_split as surprise_train_test_split
+        from surprise import accuracy
+
         try:
             # Load processed data
-            df = pd.read_csv(data_processed)
+            df = pd.read_csv("processed_data/output.csv")
 
             # Train-test split
             X = df.drop(columns=['price'])  # Input features
@@ -98,32 +100,33 @@ with DAG(
             print(f"Error in train_models: {e}")
 
     def version_data():
+        import subprocess
         try:
-            # DVC versioning and push to S3
-            import subprocess
-            dvc_command = [
-                "dvc", "add", data_processed,
-                "&&", "dvc", "push"
-            ]
-            subprocess.run(" ".join(dvc_command), shell=True, check=True)
-            print("Data versioned and pushed to S3.")
+            subprocess.run("dvc add processed_data/output.csv && dvc push", shell=True, check=True)
+            print("Data versioned and pushed to remote storage.")
         except Exception as e:
             print(f"Error in version_data: {e}")
 
-    # Define tasks
-    process_task = PythonOperator(
+    # Task definitions using PythonVirtualenvOperator
+    process_task = PythonVirtualenvOperator(
         task_id="process_raw_data",
         python_callable=process_raw_data,
+        requirements=["pandas", "dask", "scikit-learn", "numpy"],
+        system_site_packages=False,
     )
 
-    train_task = PythonOperator(
+    train_task = PythonVirtualenvOperator(
         task_id="train_models",
         python_callable=train_models,
+        requirements=["pandas", "scikit-learn", "numpy", "surprise"],
+        system_site_packages=False,
     )
 
-    version_task = PythonOperator(
+    version_task = PythonVirtualenvOperator(
         task_id="version_data",
         python_callable=version_data,
+        requirements=["dvc"],
+        system_site_packages=False,
     )
 
     # Task dependencies

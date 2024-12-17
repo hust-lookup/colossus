@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonVirtualenvOperator
 from airflow.datasets import Dataset
 from datetime import datetime, timedelta
 import pandas as pd
@@ -29,16 +29,28 @@ data_processed_dataset = Dataset("s3://processed_data/output.csv")
 
 # Define the Data Processing DAG
 with DAG(
-    dag_id="conditional_dataset_and_time_based_timetable",
+    'data_processing_dag',
     default_args=default_args,
     description='A DAG for processing large data and building recommendation models',
-    schedule_interval=timedelta(days=1),
+    schedule_interval='@hourly',  # Chạy mỗi giờ
     start_date=datetime(2023, 1, 1),
     catchup=False,
     tags=['data-processing'],
 ) as dag:
 
     def process_data():
+        import pandas as pd
+        import numpy as np
+        from sklearn.preprocessing import StandardScaler, OneHotEncoder
+        from sklearn.model_selection import train_test_split
+        from sklearn.metrics import mean_squared_error
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        from sklearn.metrics.pairwise import cosine_similarity
+        from surprise import Dataset as SurpriseDataset, Reader, SVD
+        from surprise.model_selection import train_test_split as surprise_train_test_split
+        from surprise import accuracy
+        import dask.dataframe as dd
+
         file_path = 'data/2019-Nov.csv'
         chunksize = 100000  # Số dòng trong mỗi chunk
 
@@ -138,8 +150,17 @@ with DAG(
         except Exception as e:
             print(f"Đã xảy ra lỗi: {e}")
 
-    process_task = PythonOperator(
-        task_id="conditional_dataset_and_time_based_timetable",
+    process_task = PythonVirtualenvOperator(
+        task_id='process_data_task',
         python_callable=process_data,
+        requirements=[
+            'pandas',
+            'scikit-learn',
+            'dask',
+            'numpy',
+            'scipy',
+            'surprise',
+        ],
+        system_site_packages=False,
         outlets=[data_processed_dataset],
     )
