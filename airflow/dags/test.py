@@ -12,8 +12,8 @@ default_args = {
 }
 
 # Config paths
-data_raw = "data/2019-Nov.csv"
-data_processed = "processed_data/output.csv"
+data_raw = "hustinsight/2024-12-14_19-43.parquet"
+data_processed = "hustinsight/processed_data/output.csv"
 
 with DAG(
     dag_id="data_processing_pipeline",
@@ -33,7 +33,7 @@ with DAG(
 
         try:
             # Load and process raw data
-            ddf = dd.read_csv("data/2019-Nov.csv", blocksize=100000)
+            ddf = dd.read_csv("hustinsight/2024-12-14_19-43.parquet", blocksize=100000)
 
             # Clean missing data
             ddf = ddf.fillna({'category_code': 'Unknown', 'brand': 'Unknown', 'event_type': 'Unknown'})
@@ -56,7 +56,7 @@ with DAG(
             ddf['price'] = dd.from_array(scaler.fit_transform(ddf['price'].compute().values.reshape(-1, 1)))
 
             # Save processed data
-            ddf.compute().to_csv("processed_data/output.csv", index=False)
+            ddf.compute().to_csv("hustinsight/processed_data/output.csv", index=False)
             print("Data processing completed and saved.")
         except Exception as e:
             print(f"Error in process_raw_data: {e}")
@@ -72,7 +72,7 @@ with DAG(
 
         try:
             # Load processed data
-            df = pd.read_csv("processed_data/output.csv")
+            df = pd.read_csv("hustinsight/processed_data/output.csv")
 
             # Train-test split
             X = df.drop(columns=['price'])  # Input features
@@ -102,7 +102,7 @@ with DAG(
     def version_data():
         import subprocess
         try:
-            subprocess.run("dvc add processed_data/output.csv && dvc push", shell=True, check=True)
+            subprocess.run("dvc add hustinsight/processed_data/output.csv && dvc push", shell=True, check=True)
             print("Data versioned and pushed to remote storage.")
         except Exception as e:
             print(f"Error in version_data: {e}")

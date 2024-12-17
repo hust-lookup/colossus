@@ -25,7 +25,7 @@ default_args = {
 }
 
 # Define dataset outlets
-data_processed_dataset = Dataset("s3://processed_data/output.csv")
+data_processed_dataset = Dataset("s3://hustinsight/processed_data/output.csv")
 
 # Define the Data Processing DAG
 with DAG(
@@ -51,7 +51,7 @@ with DAG(
         from surprise import accuracy
         import dask.dataframe as dd
 
-        file_path = 'data/2019-Nov.csv'
+        file_path = 's3://hustinsight/2024-12-14_19-43.parquet'
         chunksize = 100000  # Số dòng trong mỗi chunk
 
         try:
