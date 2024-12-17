@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: MacPhu12
+      MYSQL_DATABASE: ds_project
+      MYSQL_USER: root
+      MYSQL_PASSWORD: MacPhu12
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "33306:3306"
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      retries: 5
+      start_period: 5s
+      timeout: 5s
+
+  fastapi:
+    build:
+      context: ./web_api       # Chỉ định thư mục chứa Dockerfile của FastAPI
+      dockerfile: Dockerfile
+    container_name: fastapi_container
+    depends_on:
+      db:
+        condition: service_healthy                 # Đảm bảo MySQL khởi chạy trước
+    ports:
+      - "8000:8000"        # Expose cổng FastAPI
+    environment:
+      DATABASE_URL: mysql+pymysql://root:MacPhu12@db/ds_project
+    networks:
+      - app_network
+networks:
+  app_network:
+    driver: bridge

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+passlib
+sqlalchemy
+python-jose
+requests
+pymysql
+cryptography
